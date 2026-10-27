@@ -13,7 +13,7 @@ const projects = [
     context: "Projet full stack de fin d'étude",
     objective: "Créer un full-stack validant les aquis de la formation",
     skills: ['HTML', 'CSS', 'JavaScript',"PHP","Symphony", 'Travail en équipe', "Autonomie", "Réssilience"],
-    reflection: "Cela m'a permit de découvir et partager ave des collaborateurs éxceptionnel mais aussi de surmonter des challenges qui, quelques mois plus tot, me paraissaient hors de porter. Et tout ça grâce à la force de l'amitier",
+    reflection: "Cela m'a permit de découvir et partager avec des collaborateurs éxceptionnels mais aussi de surmonter des challenges qui, quelques mois plus tot, me paraissaient hors de porter. Et tout ça grâce à la force de l'amitier",
     code: '',
     demo: 'https://github.com/WildCodeSchool/2023-09-PHP-LYON-P3-eclat-d-art',
   },
