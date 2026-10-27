@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #101112;
+  color: #e8e5dc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+button, input, textarea { font: inherit; }
+a { color: inherit; }
+
+.surveillance-grid {
+  background-image: repeating-linear-gradient(90deg, transparent 0 9%, #ffffff0b 9.1% 9.3%);
+}
+
+.eye-shape {
+  width: 34px;
+  height: 18px;
+  border: 1px solid #ffffff66;
+  border-radius: 100% 0;
+  transform: rotate(45deg);
+}
+
+.eye-shape::after {
+  position: absolute;
+  top: 5px;
+  left: 12px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #c52f32;
+  content: "";
+}
+
+.scan-line { animation: scan 8s linear infinite alternate; }
+@keyframes scan { to { left: 100%; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
