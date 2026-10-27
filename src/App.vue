@@ -9,13 +9,13 @@ const year = new Date().getFullYear()
 const projects = [
   {
     number: 'Archive 001',
-    title: 'Nom du projet scolaire',
-    context: 'Présente la demande ou le besoin auquel tu répondais.',
-    objective: 'Explique ce que le projet devait accomplir.',
-    skills: ['HTML', 'CSS', 'JavaScript', 'Travail en équipe'],
-    reflection: 'Décris ce que tu as appris et ce que tu améliorerais.',
+    title: "Eclat d'art",
+    context: "Projet full stack de fin d'étude",
+    objective: "Créer un full-stack validant les aquis de la formation",
+    skills: ['HTML', 'CSS', 'JavaScript',"PHP","Symphony", 'Travail en équipe', "Autonomie", "Réssilience"],
+    reflection: "Cela m'a permit de découvir et partager ave des collaborateurs éxceptionnel mais aussi de surmonter des challenges qui, quelques mois plus tot, me paraissaient hors de porter. Et tout ça grâce à la force de l'amitier",
     code: '',
-    demo: '',
+    demo: 'https://github.com/WildCodeSchool/2023-09-PHP-LYON-P3-eclat-d-art',
   },
   {
     number: 'Archive 002',
