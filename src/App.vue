@@ -147,12 +147,12 @@ function sendEmail() {
           <p class="mb-3 text-xs font-bold uppercase tracking-[.15em] text-[#c52f32]">02 · Évolution des compétences</p>
           <h2 class="mb-5 text-4xl font-extrabold uppercase leading-tight tracking-tight md:text-6xl">Mon parcours cette année</h2>
           <p class="text-[#aaa9a3]">
-            Cette année, j'ai progressé en <strong>[compétence]</strong>. J’ai rencontré
-            <strong>[difficulté]</strong>, puis j’ai avancé grâce à
-            <strong>[méthode ou projet]</strong>. Je sais maintenant
-            <strong>[progrès concret]</strong>.
+            Cette année, j'ai progressé en <strong>JAVA</strong>. J’ai rencontré
+            <strong>peu de difficulté</strong>, puis j’ai avancé grâce à
+            <strong>au pouvoir de l'amitié</strong>. Je sais maintenant
+            <strong>la vie vaut le coup d'être d'être vécu</strong>.
           </p>
-          <p class="text-[#aaa9a3]">Ma prochaine étape est d'approfondir <strong>[compétence à développer]</strong></p>
+          <p class="text-[#aaa9a3]">Ma prochaine étape est d'approfondir <strong>le développement de syteme ce controle de masse</strong></p>
         </div>
       </section>
 
