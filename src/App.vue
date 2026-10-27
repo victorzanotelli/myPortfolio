@@ -152,7 +152,7 @@ function sendEmail() {
             <strong>au pouvoir de l'amitié</strong>. Je sais maintenant
             <strong>la vie vaut le coup d'être d'être vécu</strong>.
           </p>
-          <p class="text-[#aaa9a3]">Ma prochaine étape est d'approfondir <strong>le développement de syteme ce controle de masse</strong></p>
+          <p class="text-[#aaa9a3]">Ma prochaine étape est d'approfondir<strong>le développement de syteme ce controle de masse</strong></p>
         </div>
       </section>
 
@@ -195,7 +195,7 @@ function sendEmail() {
     </main>
 
     <footer class="px-[7%] py-8 text-sm text-[#aaa9a3] md:px-[10%]">
-      <p>© {{ year }} Votre Nom · Fin du dossier</p>
+      <p>© {{ year }}Fin du dossier</p>
       <p class="mt-5 border-t border-[#454545] pt-5 text-xs">
         AVERTISSEMENT — L’univers graphique et les éléments narratifs de ce portfolio sont fictifs.
         Toute ressemblance avec des personnes, organisations ou événements réels serait fortuite.
