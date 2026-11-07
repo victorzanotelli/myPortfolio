@@ -11,45 +11,47 @@ const hovered = ref(null)
     <h1 class="sr-only">Victor — Portfolio</h1>
 
     <div class="frame" :class="hovered && `is-${hovered}`">
-      <!-- En bas à gauche : version française, monde Zalem -->
+      <!-- En bas à gauche : version française, plus sombre -->
       <RouterLink
         to="/fr"
         class="half half-fr"
-        aria-label="Version française — thème Zalem"
+        aria-label="Version française"
         @mouseenter="hovered = 'fr'"
         @mouseleave="hovered = null"
         @focus="hovered = 'fr'"
         @blur="hovered = null"
       >
         <img :src="profile.portal" alt="" class="half-img">
-        <span class="label label-fr" aria-hidden="true">
+        <span class="door-label door-label-fr" aria-hidden="true">
           <small>Version française</small>
-          Zalem
+          <q lang="fr">C'est comme si je glissais sans tomber, le plus dur c'est une fois en bas.</q>
+          <cite>Jacques Mayol</cite>
         </span>
       </RouterLink>
 
-      <!-- En haut à droite : version anglaise, monde Brave New World -->
+      <!-- En haut à droite : version anglaise, plus lumineuse -->
       <RouterLink
         to="/en"
         class="half half-en"
-        aria-label="English version — Brave New World theme"
+        aria-label="English version"
         @mouseenter="hovered = 'en'"
         @mouseleave="hovered = null"
         @focus="hovered = 'en'"
         @blur="hovered = null"
       >
         <img :src="profile.portal" alt="" class="half-img">
-        <span class="label label-en" aria-hidden="true">
+        <span class="door-label door-label-en" aria-hidden="true">
           <small>English version</small>
-          Brave New World
+          <q lang="en">One cubic centimetre cures ten gloomy sentiments.</q>
+          <cite>Assistant Predestinator</cite>
         </span>
       </RouterLink>
     </div>
 
     <!-- Sur téléphone, l'image est petite : on ajoute deux boutons lisibles -->
     <nav class="mobile-choice" aria-label="Choose a version">
-      <RouterLink to="/fr" class="choice choice-fr">Français · Zalem</RouterLink>
-      <RouterLink to="/en" class="choice choice-en">English · Brave New World</RouterLink>
+      <RouterLink to="/fr" class="choice choice-fr">Version française</RouterLink>
+      <RouterLink to="/en" class="choice choice-en">English version</RouterLink>
     </nav>
   </main>
 </template>
@@ -95,51 +97,70 @@ const hovered = ref(null)
   transition: filter .6s ease;
 }
 
-/* Survol : chaque monde prend sa couleur, l'autre s'assombrit */
-.is-fr .half-fr .half-img { filter: sepia(1) saturate(3.4) hue-rotate(-28deg) contrast(1.15); }
-.is-en .half-en .half-img { filter: sepia(.55) saturate(2.2) hue-rotate(178deg) brightness(1.22) contrast(.95); }
-.is-fr .half-en .half-img,
-.is-en .half-fr .half-img { filter: brightness(.38); }
+/* Toujours en noir et blanc : le côté français plus sombre, le côté anglais plus lumineux */
+.half-fr .half-img { filter: grayscale(1) brightness(.62) contrast(1.1); }
+.half-en .half-img { filter: grayscale(1) brightness(1.28) contrast(.92); }
 
-.label {
+/* Au survol, chaque côté accentue son caractère */
+.is-fr .half-fr .half-img { filter: grayscale(1) brightness(.45) contrast(1.35); }
+.is-en .half-en .half-img { filter: grayscale(1) brightness(1.55) contrast(.85); }
+
+.door-label {
   position: absolute;
   display: flex;
   flex-direction: column;
-  line-height: 1;
+  max-width: 38%;
   pointer-events: none;
-  opacity: .82;
+  opacity: .85;
   transition: opacity .4s, transform .4s;
 }
-.label small { margin-bottom: .45em; font-size: .38em; letter-spacing: .25em; text-transform: uppercase; opacity: .85; }
-.is-fr .label-fr, .is-en .label-en { opacity: 1; transform: translateY(-4px); }
+.is-fr .door-label-fr, .is-en .door-label-en { opacity: 1; transform: translateY(-4px); }
 
-.label-fr {
+.door-label small {
+  margin-bottom: .8em;
+  font-size: clamp(.5rem, .9vw, .75rem);
+  letter-spacing: .25em;
+  text-transform: uppercase;
+}
+.door-label q {
+  quotes: "« " " »" "‹ " " ›";
+  font-size: clamp(.72rem, 1.75vw, 1.6rem);
+  line-height: 1.3;
+}
+.door-label-en q { quotes: "“" "”" "‘" "’"; }
+.door-label cite {
+  margin-top: .7em;
+  font-style: normal;
+  font-size: clamp(.55rem, 1vw, .85rem);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .8;
+}
+.door-label cite::before { content: "— "; }
+
+.door-label-fr {
   left: 3.5%;
   bottom: 6%;
   font-family: "Chakra Petch", sans-serif;
-  font-weight: 700;
-  font-size: clamp(1.1rem, 4vw, 3.6rem);
-  text-transform: uppercase;
-  color: #ff7a45;
-  text-shadow: 2px 0 #33e3c6aa, -2px 0 #ff4f9aaa;
+  font-weight: 600;
+  color: #f2f2f2;
+  text-shadow: 0 1px 10px #000c;
 }
-.label-fr small { font-family: "Space Mono", monospace; color: #f1e5d0; text-shadow: none; }
+.door-label-fr small, .door-label-fr cite { font-family: "Space Mono", monospace; }
 
-.label-en {
+.door-label-en {
   right: 3.5%;
   top: 6%;
   align-items: flex-end;
   text-align: right;
   font-family: "Jost", sans-serif;
   font-weight: 400;
-  font-size: clamp(1rem, 3.2vw, 2.8rem);
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: #fffdf4;
-  text-shadow: 0 1px 12px #0008;
+  font-weight: 500;
+  color: #0b0b0b;
 }
+.door-label-en small, .door-label-en cite { letter-spacing: .25em; }
 
-.half:focus-visible .label { outline: 2px dashed currentColor; outline-offset: 8px; }
+.half:focus-visible .door-label { outline: 2px dashed currentColor; outline-offset: 8px; }
 
 .mobile-choice {
   display: grid;
@@ -151,21 +172,19 @@ const hovered = ref(null)
   text-align: center;
   text-decoration: none;
   font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
 }
 .choice-fr {
   font-family: "Chakra Petch", sans-serif;
-  text-transform: uppercase;
-  color: #14100d;
-  background: #e2572c;
-  clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+  color: #f2f2f2;
+  background: #1c1c1e;
+  border: 1px solid #3a3a3d;
 }
 .choice-en {
   font-family: "Jost", sans-serif;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: #1b2442;
-  background: #fbfaf6;
-  border-radius: 999px;
+  color: #111;
+  background: #f4f4f4;
 }
 
 @media (min-width: 768px) {
