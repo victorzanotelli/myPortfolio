@@ -32,7 +32,8 @@ export const content = {
 
     home: {
       eyebrow: 'Fragment récupéré · 2026-2027',
-      title: ['Développeur', 'en pièces détachées,', 'et bien vivant.'],
+      // Phrase d'accroche : la partie du milieu est mise en valeur
+      title: ['L’intelligence sans capacité d’action est impuissante,', 'la force sans intelligence', 'est dangereuse.'],
       intro: "Étudiant à Epitech. J'apprends en démontant, en bricolant et en recollant les morceaux. Fouille dans ma décharge : il y a de belles trouvailles.",
       cta: 'Fouiller mes projets',
       contact: 'Me contacter',
@@ -139,7 +140,7 @@ export const content = {
 
     home: {
       eyebrow: 'Personal file · 2026–2027',
-      title: ['Built with order,', 'driven by', 'curiosity.'],
+      title: ['Intelligence without the power to act is helpless;', 'strength without intelligence', 'is dangerous.'],
       intro: 'Epitech student. I learn by taking things apart, testing them carefully and putting them back together, better than before.',
       cta: 'View my projects',
       contact: 'Get in touch',

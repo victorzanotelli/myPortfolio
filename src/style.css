@@ -84,7 +84,7 @@
 
   /* Accueil */
   .hero { display: grid; gap: 3rem; align-items: center; padding-block: 3.5rem 4.5rem; }
-  .hero-title { font-size: clamp(2.6rem, 7vw, 5.25rem); }
+  .hero-title { font-size: clamp(2rem, 4.6vw, 3.6rem); line-height: 1.1; }
   .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; margin-top: 2rem; }
   .photo { margin: 0; width: min(260px, 72vw); justify-self: center; }
   .photo img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
