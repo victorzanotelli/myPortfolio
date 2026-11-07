@@ -1,24 +1,86 @@
 @import "tailwindcss";
 
+/* Palette « carnet d'explorateur » : papier, encre, et une touche d'ambre boussole */
+@theme {
+  --color-paper: #f5efe3;
+  --color-paper-deep: #ebe3d2;
+  --color-card: #fbf8f1;
+  --color-ink: #1f2a37;
+  --color-ink-soft: #4b5563;
+  --color-line: #d8ccb4;
+  --color-amber: #c8641f;
+  --color-amber-dark: #a44f14;
+  --color-sea: #2f6f73;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-hand: "Caveat", "Comic Sans MS", cursive;
+}
+
 :root {
-  color-scheme: dark;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #101112;
-  color: #e8e5dc;
+  color-scheme: light;
+  font-family: var(--font-sans);
+  background: var(--color-paper);
+  color: var(--color-ink);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
-html { scroll-behavior: smooth; }
-body { margin: 0; min-width: 320px; }
-button, input, textarea { font: inherit; }
-a { color: inherit; }
+/* Dans la couche « base » pour que les classes Tailwind (text-paper…) restent prioritaires */
+@layer base {
+  body { margin: 0; min-width: 320px; background: var(--color-paper); }
+  button, input, textarea { font: inherit; }
+  a { color: inherit; }
+
+  ::selection { background: #c8641f33; }
+
+  :focus-visible {
+    outline: 2px dashed var(--color-amber);
+    outline-offset: 3px;
+  }
+}
+
+/* Courbes de niveau, comme sur une carte topographique */
+.topo {
+  background-image:
+    repeating-radial-gradient(ellipse at 85% 10%, transparent 0 34px, #1f2a3712 34px 35px),
+    repeating-radial-gradient(ellipse at 5% 95%, transparent 0 46px, #2f6f7310 46px 47px);
+}
+
+/* Grain de papier très léger */
+.paper-grain {
+  background-image: radial-gradient(#1f2a370a 1px, transparent 1px);
+  background-size: 6px 6px;
+}
+
+/* Lien souligné comme un trait de crayon */
+.pencil-link {
+  background-image: linear-gradient(var(--color-amber), var(--color-amber));
+  background-size: 0 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .25s ease;
+  text-decoration: none;
+}
+.pencil-link:hover, .pencil-link.router-link-active { background-size: 100% 2px; }
+
+/* Transition entre les pages */
+.page-enter-active, .page-leave-active { transition: opacity .25s ease, transform .25s ease; }
+.page-enter-from { opacity: 0; transform: translateY(10px); }
+.page-leave-to { opacity: 0; transform: translateY(-6px); }
+
+@keyframes needle {
+  0%, 100% { transform: rotate(-12deg); }
+  50% { transform: rotate(18deg); }
+}
+.compass-needle { transform-origin: 50% 50%; animation: needle 6s ease-in-out infinite; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
