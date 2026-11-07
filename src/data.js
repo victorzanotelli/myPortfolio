@@ -34,7 +34,7 @@ export const content = {
       eyebrow: 'Fragment récupéré · 2026-2027',
       // Phrase d'accroche : la partie du milieu est mise en valeur
       title: ['L’intelligence sans capacité d’action est impuissante,', 'la force sans intelligence', 'est dangereuse.'],
-      intro: "Après plus de 10 ans dans la restauration, en France et à l'étranger ; en associatif, en collectivité, en bar d'hôtel et en restaurant gastronomique ; à travailler entre 50 h et 90 h par semaine, j'ai décidé de me reconvertir dans l'informatique. Comment je convertis ces années d'expérience d'un domaine si différent ? En une maturité professionnelle et des compétences transverses : adaptabilité, créativité, curiosité et autonomie.",
+      intro: "Pendant plus de 10 années en restauration, j'ai travaillé à de nombreux postes et dans différents établissements, en France et à l'étranger. Cette expérience, qui suppose un fort engagement physique et mental, m'a amené à développer mon adaptabilité, ma créativité et mon autonomie.",
       cta: 'Fouiller mes projets',
       contact: 'Me contacter',
       next: 'Où creuser ensuite ?',
@@ -141,7 +141,7 @@ export const content = {
     home: {
       eyebrow: 'Personal file · 2026–2027',
       title: ['Intelligence without the power to act is helpless;', 'strength without intelligence', 'is dangerous.'],
-      intro: 'After more than 10 years in the restaurant industry, in France and abroad (non-profits, institutional catering, hotel bars and fine-dining restaurants), working between 50 and 90 hours a week, I decided to retrain in computer science. How do I turn those years in such a different field into an asset? Through professional maturity and transferable skills: adaptability, creativity, curiosity and autonomy.',
+      intro: 'Over more than 10 years in the restaurant industry, I held many positions in different establishments, in France and abroad. This experience, which demands strong physical and mental commitment, helped me develop my adaptability, creativity and autonomy.',
       cta: 'View my projects',
       contact: 'Get in touch',
       next: 'Where to next?',
