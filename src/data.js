@@ -106,9 +106,9 @@ export const content = {
 
     // Le texte peut contenir des balises <strong>
     journey: [
-      "Cette année, j'ai progressé en <strong>JAVA</strong>. J’ai rencontré <strong>peu de difficulté</strong>, puis j’ai avancé grâce à <strong>au pouvoir de l'amitié</strong>. Je sais maintenant <strong>la vie vaut le coup d'être d'être vécu</strong>.",
+      "Depuis ma rentrée à Epitech, je découvre de nombreux langages et technologies. Conscient qu'il faut du temps pour maîtriser ne serait-ce qu'un de ces domaines, je cherche toujours à en apprendre et à en tester de nouveaux. La diversité des compétences apporte une meilleure vision d'ensemble et une plus grande ouverture d'esprit sur différents projets.",
     ],
-    journeyNext: "Ma prochaine étape est d'approfondir <strong>le développement de syteme ce controle de masse</strong>",
+    journeyNext: "À côté de mes études, je commence à travailler sur un projet qui me tient à cœur : développer des assistants virtuels ultraspécialisés, entraînés sur des données open source. Le but est de créer des « IA » utilisées pour des tâches précises, qui tournent en local afin de limiter au maximum l'impact environnemental ainsi que le partage et la circulation des données.",
 
     experiences: [
       {
@@ -212,9 +212,9 @@ export const content = {
     ],
 
     journey: [
-      'This year, I improved in <strong>Java</strong>. I faced <strong>few difficulties</strong>, and I moved forward thanks to <strong>the power of friendship</strong>. Now I know that <strong>life is worth living</strong>.',
+      'Since starting at Epitech, I have been discovering many languages and technologies. I know it takes time to master even one of these fields, so I am always looking to learn and try new ones. A diverse set of skills gives a better overall view and a more open mind when approaching different projects.',
     ],
-    journeyNext: 'My next step is to go deeper into <strong>developing mass control systems</strong>.',
+    journeyNext: 'Alongside my studies, I am starting to work on a project close to my heart: building highly specialized virtual assistants trained on open-source data. The goal is to create “AIs” for specific tasks that run locally, to keep their environmental impact, and the sharing and circulation of data, as low as possible.',
 
     experiences: [
       {

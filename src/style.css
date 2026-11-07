@@ -87,7 +87,7 @@
   .hero-title { font-size: clamp(2rem, 4.6vw, 3.6rem); line-height: 1.1; }
   .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; margin-top: 2rem; }
   .photo { margin: 0; width: min(260px, 72vw); justify-self: center; }
-  .photo img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+  .photo img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 18%; }
   .photo figcaption { margin-top: .75rem; font-family: var(--font-label); font-size: .8rem; color: var(--muted); }
   .band { padding-block: 4rem 5rem; background: var(--band); border-top: 1px solid var(--line); }
   .dest-grid { display: grid; gap: 1rem; margin: 0; padding: 0; list-style: none; }
