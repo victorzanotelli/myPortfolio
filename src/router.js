@@ -1,31 +1,55 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import { content, paths } from './data'
+import PortalPage from './pages/PortalPage.vue'
+import SiteLayout from './layouts/SiteLayout.vue'
 import HomePage from './pages/HomePage.vue'
 import ProjectsPage from './pages/ProjectsPage.vue'
 import JourneyPage from './pages/JourneyPage.vue'
 import ExperiencesPage from './pages/ExperiencesPage.vue'
 import ContactPage from './pages/ContactPage.vue'
 
-// Historique en « hash » (#/projets) : fonctionne sur GitHub Pages
-// même quand on recharge une page ou qu'on partage un lien direct.
-const routes = [
-  { path: '/', name: 'home', component: HomePage, meta: { title: 'Accueil' } },
-  { path: '/projets', name: 'projects', component: ProjectsPage, meta: { title: 'Projets' } },
-  { path: '/parcours', name: 'journey', component: JourneyPage, meta: { title: 'Parcours' } },
-  { path: '/experiences', name: 'experiences', component: ExperiencesPage, meta: { title: 'Expériences' } },
-  { path: '/contact', name: 'contact', component: ContactPage, meta: { title: 'Contact' } },
-  { path: '/:pathMatch(.*)*', redirect: '/' },
-]
+const pages = {
+  home: HomePage,
+  projects: ProjectsPage,
+  journey: JourneyPage,
+  experiences: ExperiencesPage,
+  contact: ContactPage,
+}
+
+// Les deux mondes ont exactement les mêmes pages, seules la langue et le thème changent.
+function world(lang) {
+  const root = paths[lang].home
+  return {
+    path: root,
+    component: SiteLayout,
+    meta: { lang },
+    children: Object.entries(paths[lang]).map(([page, full]) => ({
+      path: full === root ? '' : full.slice(root.length + 1),
+      component: pages[page],
+      meta: { page },
+    })),
+  }
+}
 
 const router = createRouter({
+  // Historique en « hash » (#/fr/projets) : fonctionne sur GitHub Pages
+  // même quand on recharge une page ou qu'on partage un lien direct.
   history: createWebHashHistory(import.meta.env.BASE_URL),
-  routes,
+  routes: [
+    { path: '/', component: PortalPage, meta: { page: 'portal' } },
+    world('fr'),
+    world('en'),
+    { path: '/:pathMatch(.*)*', redirect: '/' },
+  ],
   scrollBehavior: () => ({ top: 0 }),
 })
 
 router.afterEach((to) => {
-  document.title = to.meta.title === 'Accueil'
-    ? 'Victor — Portfolio'
-    : `${to.meta.title} · Victor — Portfolio`
+  const lang = to.meta.lang
+  document.documentElement.lang = lang || 'fr'
+  document.title = lang
+    ? `${content[lang].pages[to.meta.page]} · Victor — Portfolio`
+    : 'Victor — Portfolio'
 })
 
 export default router
