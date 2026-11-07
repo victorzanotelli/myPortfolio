@@ -34,7 +34,7 @@ export const content = {
       eyebrow: 'Fragment récupéré · 2026-2027',
       // Phrase d'accroche : la partie du milieu est mise en valeur
       title: ['L’intelligence sans capacité d’action est impuissante,', 'la force sans intelligence', 'est dangereuse.'],
-      intro: "Étudiant à Epitech. J'apprends en démontant, en bricolant et en recollant les morceaux. Fouille dans ma décharge : il y a de belles trouvailles.",
+      intro: "Après plus de 10 ans dans la restauration, en France et à l'étranger ; en associatif, en collectivité, en bar d'hôtel et en restaurant gastronomique ; à travailler entre 50 h et 90 h par semaine, j'ai décidé de me reconvertir dans l'informatique. Comment je convertis ces années d'expérience d'un domaine si différent ? En une maturité professionnelle et des compétences transverses : adaptabilité, créativité, curiosité et autonomie.",
       cta: 'Fouiller mes projets',
       contact: 'Me contacter',
       next: 'Où creuser ensuite ?',
@@ -141,7 +141,7 @@ export const content = {
     home: {
       eyebrow: 'Personal file · 2026–2027',
       title: ['Intelligence without the power to act is helpless;', 'strength without intelligence', 'is dangerous.'],
-      intro: 'Epitech student. I learn by taking things apart, testing them carefully and putting them back together, better than before.',
+      intro: 'After more than 10 years in the restaurant industry, in France and abroad (non-profits, institutional catering, hotel bars and fine-dining restaurants), working between 50 and 90 hours a week, I decided to retrain in computer science. How do I turn those years in such a different field into an asset? Through professional maturity and transferable skills: adaptability, creativity, curiosity and autonomy.',
       cta: 'View my projects',
       contact: 'Get in touch',
       next: 'Where to next?',
