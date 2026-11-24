@@ -112,6 +112,12 @@ export const content = {
 
     experiences: [
       {
+        date: '20–22 nov. 2026',
+        place: 'Hackathon',
+        title: 'Bioecocamp',
+        detail: 'Hackathon de trois jours sur le thème de la valorisation de la biomasse.',
+      },
+      {
         date: '2024',
         place: 'Association',
         title: 'Atipik',
@@ -217,6 +223,12 @@ export const content = {
     journeyNext: 'Alongside my studies, I am starting to work on a project close to my heart: building highly specialized virtual assistants trained on open-source data. The goal is to create “AIs” for specific tasks that run locally, to keep their environmental impact, and the sharing and circulation of data, as low as possible.',
 
     experiences: [
+      {
+        date: 'Nov 20–22, 2026',
+        place: 'Hackathon',
+        title: 'Bioecocamp',
+        detail: 'A three-day hackathon on biomass valorization: finding new ways to turn biomass into useful resources.',
+      },
       {
         date: '2024',
         place: 'Non-profit',
